@@ -2246,9 +2246,9 @@ function handlePlayerMovement2() {
     let localOffY = 0;
 
     let localSpeed = SPACECRAFT_SPEED; // 6 or 3 
-
+ 
     // Reduce speed if cloaked and character can cloak
-    if (myCharacterData.canSnipe) {
+    if (myCharacterData.canSnipe || myCharacterData.canRapidFire) {
         localSpeed = Math.max(1, localSpeed / 1.5);
     }
 
